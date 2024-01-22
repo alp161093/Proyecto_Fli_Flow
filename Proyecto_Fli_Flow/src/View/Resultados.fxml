@@ -21,7 +21,7 @@
                </font>
             </Text>
             <FontAwesomeIcon fill="#13b029" glyphName="BUG" layoutX="100.0" layoutY="65.0" size="60" wrappingWidth="65.79995727539062" />
-            <Label layoutX="66.0" layoutY="88.0" prefHeight="70.0" prefWidth="34.0" style="-fx-font-weight: bold;" text="1" textFill="#01a9db">
+            <Label fx:id="labeBugs" layoutX="14.0" layoutY="88.0" prefHeight="70.0" prefWidth="102.0" style="-fx-font-weight: bold;" text="1" textFill="#01a9db">
                <font>
                   <Font size="48.0" />
                </font>
@@ -36,7 +36,7 @@
                   <Font size="29.0" />
                </font>
             </Text>
-            <Label layoutX="86.0" layoutY="105.0" prefHeight="70.0" prefWidth="34.0" style="-fx-font-weight: bold;" text="1" textFill="#01a9db">
+            <Label fx:id="labelDuplicidad" layoutX="46.0" layoutY="105.0" prefHeight="70.0" prefWidth="112.0" style="-fx-font-weight: bold;" text="1" textFill="#01a9db">
                <font>
                   <Font size="48.0" />
                </font>
@@ -46,7 +46,7 @@
                   <Font size="48.0" />
                </font>
             </Label>
-            <Label layoutX="138.0" layoutY="105.0" prefHeight="70.0" prefWidth="52.0" style="-fx-font-weight: bold;" text="\%" textFill="#01a9db">
+            <Label layoutX="175.0" layoutY="105.0" prefHeight="70.0" prefWidth="52.0" style="-fx-font-weight: bold;" text="\%" textFill="#01a9db">
                <font>
                   <Font size="48.0" />
                </font>
@@ -60,7 +60,7 @@
                   <Font size="29.0" />
                </font>
             </Text>
-            <Label layoutX="116.0" layoutY="111.0" prefHeight="70.0" prefWidth="34.0" style="-fx-font-weight: bold;" text="1" textFill="#01a9db">
+            <Label fx:id="labelVulnerabilidades" layoutX="87.0" layoutY="111.0" prefHeight="70.0" prefWidth="86.0" style="-fx-font-weight: bold;" text="1" textFill="#01a9db">
                <font>
                   <Font size="48.0" />
                </font>
@@ -77,7 +77,7 @@
                </font>
             </Text>
             <FontAwesomeIcon fill="#01a9db" glyphName="SHIELD" layoutX="111.0" layoutY="65.0" size="60" wrappingWidth="43.399993896484375" />
-            <Label layoutX="66.0" layoutY="88.0" prefHeight="70.0" prefWidth="34.0" style="-fx-font-weight: bold;" text="1" textFill="#01a9db">
+            <Label fx:id="labelCodeSmells" layoutX="31.0" layoutY="88.0" prefHeight="70.0" prefWidth="102.0" style="-fx-font-weight: bold;" text="1" textFill="#01a9db">
                <font>
                   <Font size="48.0" />
                </font>

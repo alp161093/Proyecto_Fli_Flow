@@ -18,7 +18,9 @@ import application.Main;
 import application.PopUpMain;
 import application.Proyecto;
 import application.ProyectoWindow;
+import application.Resultados;
 import application.ResultadosWindow;
+import application.Usuario;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -105,8 +107,9 @@ public class ProyectosController {
 							botonEjecutar.setOnAction((event) -> {
 								//Aqui va el codigo que va a hacer el boton de ejecur al hacer click
 								//crear fucnion en main que haga la logica del ejecutar
+								Proyecto pr = getTableView().getItems().get(getIndex());
 								Stage ResultadosWindow = new Stage();
-								ResultadosWindow mp = new ResultadosWindow(); 
+								ResultadosWindow mp = new ResultadosWindow(pr); 
 								mp.start(ResultadosWindow);
 							});
 							setGraphic(botonEjecutar);
@@ -133,8 +136,9 @@ public class ProyectosController {
 							botonConsultar.setOnAction((event) -> {
 								//Aqui va el codigo que va a hacer el boton de ejecur al hacer click
 								//crear fucnion en main que haga la logica del ejecutar
+								Proyecto pr = getTableView().getItems().get(getIndex());
 								Stage ResultadosWindow = new Stage();
-								ResultadosWindow mp = new ResultadosWindow(); 
+								ResultadosWindow mp = new ResultadosWindow(pr); 
 								mp.start(ResultadosWindow);
 							});
 							setGraphic(botonConsultar);
@@ -222,7 +226,7 @@ public class ProyectosController {
 		else {
 			LocalDate fechaActual = LocalDate.now();
 			this.idFuturo++;
-			Proyecto proyectoNuevo = new Proyecto(this.idFuturo, Main.user.getId(), nombreProyectoText, rutaProyectoText, fechaActual, fechaActual);
+			Proyecto proyectoNuevo = new Proyecto(this.idFuturo, Main.user.getId(), nombreProyectoText, rutaProyectoText, fechaActual, fechaActual, new Resultados());
 			Main.listaProyectos.add(proyectoNuevo);
 			ProyectosAFichero();
 			obs.add(proyectoNuevo);

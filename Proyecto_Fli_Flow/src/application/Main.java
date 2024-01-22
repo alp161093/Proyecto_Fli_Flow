@@ -39,7 +39,8 @@ public class Main extends Application implements Serializable {
 			/*Usuario us = new Usuario(0,"admin", "admin", true);
 			listaUsuarios.add(us);
 			ClientesAFichero();*/
-			/*listaProyectos.add(new Proyecto(0,0,"prueba1", "C:\\Users\\alvar\\git\\ProyectoIngenieria\\ProyectoIngenieria\\src\\PoyectoIngenieria",LocalDate.of(2023, 12, 13),LocalDate.of(2023, 12, 14)));
+			/*Resultados r = new Resultados("1","15.0", "70", new CodeSmells("5", null));
+			listaProyectos.add(new Proyecto(0,0,"prueba1", "C:\\Users\\alvar\\git\\ProyectoIngenieria\\ProyectoIngenieria\\src\\PoyectoIngenieria",LocalDate.of(2023, 12, 13),LocalDate.of(2023, 12, 14), r));
 			ProyectosAFichero();*/
 			LeerProyectosDeFichero();
 			LeerUsuariosDeFichero();

@@ -1,8 +1,9 @@
 package application;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class CodeSmells {
+public class CodeSmells implements Serializable{
 	private String total;
 	private ArrayList<String> listaDatos;
 	

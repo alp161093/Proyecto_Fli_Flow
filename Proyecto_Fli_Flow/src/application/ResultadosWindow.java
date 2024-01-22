@@ -11,13 +11,20 @@ import javafx.stage.Stage;
 
 public class ResultadosWindow extends Application{
 	
+	private Proyecto proyecto;
+	
+	
+	public ResultadosWindow(Proyecto pro) {
+		this.proyecto = pro;
+	}
+	
 	public void start(Stage primaryStage) {
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/Resultados.fxml"));
 	        Parent root = loader.load();
 	        // Obtener el controlador
 	        ResultadosController controller = loader.getController();
-	        controller.initialize(null, null);
+	        controller.initialize(null, null, this.proyecto);
 			Scene scene = new Scene(root);
 			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setTitle("Menu Principal/ Proyectos / Resultados");
