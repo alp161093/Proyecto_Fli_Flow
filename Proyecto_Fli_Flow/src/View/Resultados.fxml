@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="586.0" prefWidth="821.0" style="-fx-background-color: #F2F3F4;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ResultadosController">
+   <children>
+      <MenuBar layoutY="-2.0" prefHeight="26.0" prefWidth="821.0" styleClass="MenuBar" stylesheets="@application.css" />
+      <Button layoutX="746.0" layoutY="35.0" mnemonicParsing="false" onAction="#atrasOnClick" style="-fx-background-color: #ddd952;" text="ATRÁS" />
+      <Pane layoutX="72.0" layoutY="88.0" prefHeight="221.0" prefWidth="266.0" style="-fx-background-color: trasnparete; -fx-border-color: #01A9DB; -fx-border-radius: 25px;">
+         <children>
+            <Text fill="#01a9db" layoutX="150.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Bugs" wrappingWidth="73.79995727539062">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Text>
+            <FontAwesomeIcon fill="#13b029" glyphName="BUG" layoutX="100.0" layoutY="65.0" size="60" wrappingWidth="65.79995727539062" />
+            <Label layoutX="66.0" layoutY="88.0" prefHeight="70.0" prefWidth="34.0" style="-fx-font-weight: bold;" text="1" textFill="#01a9db">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Button layoutX="101.0" layoutY="183.0" mnemonicParsing="false" styleClass="botonAzul" stylesheets="@application.css" text="Ver Bugs" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane layoutX="456.0" layoutY="326.0" prefHeight="221.0" prefWidth="266.0" style="-fx-background-color: trasnparete; -fx-border-color: #01A9DB; -fx-border-radius: 25px;">
+         <children>
+            <Text fill="#01a9db" layoutX="55.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Duplicidad" wrappingWidth="166.59994506835938">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Text>
+            <Label layoutX="86.0" layoutY="105.0" prefHeight="70.0" prefWidth="34.0" style="-fx-font-weight: bold;" text="1" textFill="#01a9db">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Label layoutX="158.0" layoutY="70.0" prefHeight="70.0" prefWidth="34.0" style="-fx-font-weight: bold;" textFill="#01a9db">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Label layoutX="138.0" layoutY="105.0" prefHeight="70.0" prefWidth="52.0" style="-fx-font-weight: bold;" text="\%" textFill="#01a9db">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="72.0" layoutY="326.0" prefHeight="221.0" prefWidth="266.0" style="-fx-background-color: trasnparete; -fx-border-color: #01A9DB; -fx-border-radius: 25px;">
+         <children>
+            <Text fill="#01a9db" layoutX="14.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Vulnerabilidades" wrappingWidth="235.39996337890625">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Text>
+            <Label layoutX="116.0" layoutY="111.0" prefHeight="70.0" prefWidth="34.0" style="-fx-font-weight: bold;" text="1" textFill="#01a9db">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Button layoutX="70.0" layoutY="181.0" mnemonicParsing="false" styleClass="botonAzul" stylesheets="@application.css" text="Ver Vulnerabilidades" textFill="WHITE" />
+            <FontAwesomeIcon fill="#efdc06" glyphName="EXCLAMATION" layoutX="120.0" layoutY="65.0" size="60" wrappingWidth="24.19998168945301" />
+         </children>
+      </Pane>
+      <Pane layoutX="456.0" layoutY="88.0" prefHeight="221.0" prefWidth="266.0" style="-fx-background-color: trasnparete; -fx-border-color: #01A9DB; -fx-border-radius: 25px;">
+         <children>
+            <Text fill="#01a9db" layoutX="154.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Code Smells" wrappingWidth="142.5999755859375">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Text>
+            <FontAwesomeIcon fill="#01a9db" glyphName="SHIELD" layoutX="111.0" layoutY="65.0" size="60" wrappingWidth="43.399993896484375" />
+            <Label layoutX="66.0" layoutY="88.0" prefHeight="70.0" prefWidth="34.0" style="-fx-font-weight: bold;" text="1" textFill="#01a9db">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Button layoutX="81.0" layoutY="183.0" mnemonicParsing="false" styleClass="botonAzul" stylesheets="@application.css" text="Ver Code Smells" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Text layoutX="322.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resultados" wrappingWidth="177.79995727539062">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
