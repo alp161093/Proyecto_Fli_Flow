@@ -7,18 +7,28 @@ public class Proyecto implements Serializable{
 	private String nombre, url;
 	private int id, idUser;
 	private LocalDate fechaCreacion, fechaUltimoUso;
+	private Resultados resultados;
 	
 	public Proyecto() {
 		
 	}
 
-	public Proyecto(int id, int idUser,String nombre, String url, LocalDate fechaCreacion, LocalDate fechaUltimoUso) {
+	public Proyecto(int id, int idUser,String nombre, String url, LocalDate fechaCreacion, LocalDate fechaUltimoUso, Resultados result) {
 		this.id = id;
 		this.idUser = idUser;
 		this.nombre = nombre;
 		this.url = url;
 		this.fechaCreacion = fechaCreacion;
 		this.fechaUltimoUso = fechaUltimoUso;
+		this.resultados = result;
+	}
+
+	public Resultados getResultados() {
+		return resultados;
+	}
+
+	public void setResultados(Resultados resultados) {
+		this.resultados = resultados;
 	}
 
 	public int getIdUser() {
