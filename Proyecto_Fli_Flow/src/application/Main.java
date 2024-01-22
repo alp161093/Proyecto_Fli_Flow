@@ -118,6 +118,7 @@ public class Main extends Application implements Serializable {
     	listaProyectos.remove(pr);
     	ProyectosAFichero();
     }
+    
     public static void EliminarUsuario(Usuario user){
     	listaUsuarios.remove(user);
     	ClientesAFichero();
