@@ -13,6 +13,7 @@ import java.util.ResourceBundle;
 
 import javax.swing.text.StyledEditorKit.ForegroundAction;
 
+import application.CodeSmells;
 import application.DatosWindow;
 import application.Main;
 import application.PopUpMain;
@@ -20,6 +21,7 @@ import application.Proyecto;
 import application.ProyectoWindow;
 import application.Resultados;
 import application.ResultadosWindow;
+import application.Selenium;
 import application.Usuario;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -108,6 +110,13 @@ public class ProyectosController {
 								//Aqui va el codigo que va a hacer el boton de ejecur al hacer click
 								//crear fucnion en main que haga la logica del ejecutar
 								Proyecto pr = getTableView().getItems().get(getIndex());
+								try {
+									Proyecto resultado=new Selenium().Ejecutar(pr);
+									//Añadir para actualizar proyecto
+								} catch (InterruptedException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
 								Stage ResultadosWindow = new Stage();
 								ResultadosWindow mp = new ResultadosWindow(pr); 
 								mp.start(ResultadosWindow);
@@ -132,7 +141,7 @@ public class ProyectosController {
 							setGraphic(null);
 							setText(null);
 						}else {
-							botonConsultar = crearBoton("Consultar resultados", "O", "-fx-background-color: #31B404; -fx-font-weight: bold;");
+							botonConsultar = crearBoton("Consultar resultados", "O", "-fx-background-color: #01A9DB; -fx-font-weight: bold;");
 							botonConsultar.setOnAction((event) -> {
 								//Aqui va el codigo que va a hacer el boton de ejecur al hacer click
 								//crear fucnion en main que haga la logica del ejecutar
@@ -165,7 +174,7 @@ public class ProyectosController {
 							botonEliminar.setOnAction((event) -> {
 								//Aqui va el codigo que va a hacer el boton de eliminar al hacer click
 								Proyecto pr = getTableView().getItems().get(getIndex());
-								tablaProyectos.getItems().remove(pr);
+							
 								//funcion para eliminar proyecto de los ficheros
 								
 								Alert alert = new Alert(AlertType.CONFIRMATION);
@@ -177,8 +186,10 @@ public class ProyectosController {
 						        alertStage.getIcons().add(icon);
 						    	
 								Optional<ButtonType> result = alert.showAndWait();
-								if(result.get() == ButtonType.OK) 	 
+								if(result.get() == ButtonType.OK) {	 
 									EliminarProyecto(pr);
+									tablaProyectos.getItems().remove(pr);
+								}
 							});
 							setGraphic(botonEliminar);
 							setText(null);
@@ -226,7 +237,7 @@ public class ProyectosController {
 		else {
 			LocalDate fechaActual = LocalDate.now();
 			this.idFuturo++;
-			Proyecto proyectoNuevo = new Proyecto(this.idFuturo, Main.user.getId(), nombreProyectoText, rutaProyectoText, fechaActual, fechaActual, new Resultados());
+			Proyecto proyectoNuevo = new Proyecto(this.idFuturo, Main.user.getId(), nombreProyectoText, rutaProyectoText, fechaActual, fechaActual, new Resultados("0","0.0", "0", new CodeSmells("0", null)));
 			Main.listaProyectos.add(proyectoNuevo);
 			ProyectosAFichero();
 			obs.add(proyectoNuevo);
