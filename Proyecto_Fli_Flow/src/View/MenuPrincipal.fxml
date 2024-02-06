@@ -6,20 +6,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuPrincipalController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuPrincipalController">
    <children>
-      <MenuBar prefHeight="28.0" prefWidth="600.0" styleClass="MenuBar" stylesheets="@application.css" />
+      <MenuBar prefHeight="28.0" prefWidth="600.0" styleClass="MenuBar" stylesheets="@application.css">
+       
+      </MenuBar>
       <Button layoutX="451.0" layoutY="181.0" mnemonicParsing="false" onAction="#proyectoMenuOnClick" styleClass="botonAzul" stylesheets="@application.css" text="Proyectos" textFill="WHITESMOKE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <ImageView fx:id="imagenMenu" fitHeight="218.0" fitWidth="200.0" layoutX="200.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true" style="-fx-alignment: CENTER;" />
       <Button layoutX="53.0" layoutY="181.0" mnemonicParsing="false" onAction="#misDatosMenuOnClick" styleClass="botonAzul" stylesheets="@application.css" text="Mis datos" textFill="WHITESMOKE">
-         <font>
+       <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="493.0" layoutY="37.0" mnemonicParsing="false" onAction="#cerrarSesionOnClick" opacity="0.77" styleClass="botonCerrarSesion" stylesheets="@application.css" text="Cerrar sesión" />
+     <ImageView fx:id="imagenMenu" fitHeight="218.0" fitWidth="200.0" layoutX="200.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true" style="-fx-alignment: CENTER;" />
+       <Button layoutX="474.0" layoutY="38.0" mnemonicParsing="false" onAction="#cerrarSesionOnClick" opacity="0.77" styleClass="botonCerrarSesion" stylesheets="@application.css" text="Cerrar sesión" />
    </children>
 </AnchorPane>
